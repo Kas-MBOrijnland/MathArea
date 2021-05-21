@@ -22,7 +22,7 @@
 	<!-- jquery bestanden koppelen -->
 	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 	<!-- my JS file-->
-	<script src="js/script.js"></script>
+	<script src="lib/script.js"></script>
 
 
 	<main class="container mt-2">
