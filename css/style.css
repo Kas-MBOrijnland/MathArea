@@ -1,13 +1,41 @@
 @charset "UTF-8"; 
  
 
-/* Small devices (phones) */
+body {
+    overflow-x: hidden;
+}
+
+.navigatie_boven{ 
+    font-size: 1.3rem;
+    color: #0050fd;
+}
+.navigatie_boven a:link, a:active, a:visited {
+    color: #0050fd;
+}.navigatie_boven a:hover {
+    color: #de0af1;
+}
+
+
+.tekst-1 h1 {
+    font-size: 4rem;
+}
+.tekst-1 p {
+    font-size: 1.7rem;
+    color: #000f94;
+}
+
+
+
+
+/* 
+Small devices (phones) 
 @media screen and (min-width: 100px) and (max-width: 768.9px) { 
 
 }
 
 
-/* Large devices (desktops)*/
+ Large devices (desktops)
 @media screen and (min-width: 769px) {
 
 }
+*/
