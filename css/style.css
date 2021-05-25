@@ -4,7 +4,9 @@
 body {
     overflow-x: hidden;
 }
-
+.logo img{
+    padding: 15px;
+}
 .navigatie_boven{ 
     font-size: 1.3rem;
     color: #0050fd;
