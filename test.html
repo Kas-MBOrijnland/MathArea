@@ -22,45 +22,58 @@
 	<!-- jquery bestanden koppelen -->
 	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 	<!-- my JS file-->
-	<script src="lib/script.js"></script>
+	<script src="lib/maths.js"></script>
 
 
 	<header class="row w-100 h-100 align-items-center">
 		<article class="col-md-2 pt-2 logo"><img class="img-fluid" src="images/Matharea_logo.svg" alt="Logo MathArea"></article>
 		<nav class="nav col-md-10 d-flex justify-content-center navigatie_boven">
 			<a class="nav-link" href="index.html">Homepage</a>
-			<a class="nav-link" href="test.html">Reken Pagina</a>
+			<a class="nav-link" href="rekenpagina.html">Reken Pagina</a>
 			<a class="nav-link" href="fibonacci.html">Reeks Pagina</a>
 			<a class="nav-link" href="#">Moeilijke Berekeningen</a>
 			<a class="nav-link" href="Presentatiepagina.php">Presentatie</a>
 			<a class="nav-link" href="#">Dobbelsteen Pagina</a>
-			<a class="nav-link" href="test.html">Spel Pagina</a>
+			<a class="nav-link" href="#">Spel Pagina</a>
 		</nav>
 	</header>
+    <main class="sm-5 p-sm-5">
+        <div class="row form-group">
+              <div class="col-sm-5">
+                  <select class="form-control" id="opKeuze" onchange="opzetKeuze()">
+                      <option value="tafel">Tafels</option>
+                      <option value="macht">Machtreeks</option>
+                      <option value="breuk">Breukenreeks</option>
+                      <option value="kwadraat">Kwadratenreeks</option>
+                  </select>
+              </div>
+          </div>
+          <div class="row form-group">
+              <div class="col-sm-5">
+                  <input type="number" class="form-control" placeholder="invoer" id="txt_Ond3_In" />
+              </div>
 
-	<main class="mt-5">
-
-		<section class="row justify-content-center align-items-center">
-			<article class="col-md-5">
-				<img class="img-fluid" src="images/math-poster.jpeg" alt="poster image">
-			</article>
-
-			<article class="col-md-6 tekst-1">
-				<H1>
-					Welkom bij MathArea!
-				</H1>
-				<p class="mt-4">
-					Beste reken website! <br>
-					Met alles wat je nodig hebt! <br>
-					Eenvoudig in gebruik! <br>
-					
-				</p>
-			</article>
-		</section>
-	</main>
+          </div>
+          <div>
+              <div class="col-sm-5">
+                  <input type="number" class="form-control" placeholder="tot" id="txt_Ond3_Tot" />
+              </div>
+          </div>
+          <div class="row form-group">
+              <div class="col-sm-5">
+                  <button class="btn btn-warning form-control" onclick="clear()">Verwijderen</button>
+              </div>
+          </div>
+          <div class="row form-group">
+              <div class="col-sm-5">
+                  <button class="btn btn-primary form-control" onclick="Bereken()">Bereken</button>
+              </div>
+              <div class="col-sm-4 m-sm-5 mt--5 pe-sm-5">
+                <div id="dResultaat" class="jumbotron"></div>
+            </div>
+          </div>
+  
+      </main>
 
 </body>
 </html>
-
-
-

@@ -1,0 +1,16 @@
+
+
+h1 {
+	font-size: 4rem;
+}
+
+#output {
+    
+	max-width: 600px;
+	margin: auto;
+}
+
+input {
+	border: 3px solid black;
+	text-align: center;
+}
