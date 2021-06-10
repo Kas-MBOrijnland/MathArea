@@ -25,6 +25,10 @@ body {
     font-size: 1.7rem;
     color: #000f94;
 }
+.carousel slide {
+    justify-content: center;
+    align-items: center;
+}
 
 
 
