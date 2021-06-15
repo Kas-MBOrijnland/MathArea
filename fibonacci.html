@@ -38,21 +38,45 @@
 		</nav>
 	</header>
     
-		<main class="container lg-12">
-        	<div class="col-md-6">
+		<main class="row mt-5">
+			<!--fibonacci-->
+        	<div class="col-md-6 fib">
             	<h1>Fibonaccireeks</h1>
 
             	<p>Voer je max aantaal in:</p>
             	<input type="text" value="10" oninput="refresh()"/>
-            <div id="output"></div>
+            <div id="output1"></div>
         	</div>
-			<div class="col-md-6">
-				
+
+			<!--priem-->
+			<div class="col-md-6 pri">
+				<h1>Priemgetallen</h1>
+
+				<p>Voer je max aantaal in:</p>
+				<form action="" method="post" id="prime">
+					<div>
+						<input type="text" id="number" name="number" placeholder="Number" />
+						<input type="submit" value="Calculate" />
+					</div>
+				</form>
+				<div id="output2"></div>
 			</div>
 		</main>
 
     </body>
     </html>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -93,7 +117,7 @@ function fibonacci(fMax) {
 
 //grab the code output, and display in the on the page...
 var input = document.querySelector('input');
-var output = document.querySelector('#output');
+var output = document.querySelector('#output1');
 output.textContent = fibonacci(input.value).join(", ");
 
 function refresh(){
@@ -101,4 +125,63 @@ function refresh(){
 	sumOdds();
 }
 
+
+
+
+
+
+(function() {
+
+var isPrimeNumber = function( number ) {
+	if ( number == 1 || number == 2 ) {
+		return true;
+	}
+	for ( var i = 2; i < number; i++ ) {
+
+		if ( number % i == 0 ) {
+			return false;
+		}
+	} 
+	return true;
+};
+
+var unique = function( arr ) {
+	return arr.reduce(function( p, c ) {
+		if ( p.indexOf( c ) < 0 ) {
+			p.push( c );	
+		}
+		return p; 
+	}, []);
+};
+
+var nextPrime = function( number ) {
+	var n;
+	if( number % 2 == 0 ) {
+		number++;
+	}
+	
+	for( n = number; !isPrimeNumber( n ); n += 2 ) {
+		
+	}
+	return n;
+};
+
+document.addEventListener( "DOMContentLoaded", function() {
+	var form = document.querySelector( "#prime" ),
+		output = document.querySelector( "#output2" );
+		
+	form.addEventListener( "submit", function( e ) {
+		e.preventDefault();
+		var n = document.querySelector( "#number" ).value;
+		var text = [];
+		for( var i = 0; i < n; ++i ) {
+			text.push( nextPrime( i ) );	
+		}
+		output.innerHTML = unique( text ).join( " " );
+	}, false);
+	
+});
+
+
+})();
     </Script>
