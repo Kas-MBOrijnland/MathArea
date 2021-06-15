@@ -26,6 +26,7 @@ body {
     color: #000f94;
 }
 .carousel slide {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
