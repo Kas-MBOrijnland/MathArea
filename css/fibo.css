@@ -1,4 +1,31 @@
 
+@charset "UTF-8";
+
+body {
+    overflow-x: hidden;
+}
+.logo img{
+    padding: 15px;
+}
+.navigatie_boven{ 
+    font-size: 1.3rem;
+    color: #0050fd;
+}
+.navigatie_boven a:link, a:active, a:visited {
+    color: #0050fd;
+}.navigatie_boven a:hover {
+    color: #de0af1;
+}
+
+
+
+
+
+
+
+
+
+
 body {
 	margin: 5vw;
 	overflow-x: hidden;
