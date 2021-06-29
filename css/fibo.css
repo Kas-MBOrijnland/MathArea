@@ -26,9 +26,8 @@ body {
 
 
 
-body {
+main {
 	margin: 5vw;
-	overflow-x: hidden;
 }
 h1 {
 	font-size: 4rem;
